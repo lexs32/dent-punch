@@ -1,0 +1,6 @@
+﻿verify_*.png
+verify_*.py
+capture_clean.py
+*.log
+.DS_Store
+Thumbs.db
