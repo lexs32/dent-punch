@@ -1,9 +1,28 @@
 /* ==========================================================================
    DENT PUNCH — Detail AesthetiX 1:1 Replica Styling System
    Dark Luxury Automotive PDR Aesthetic
+   Exact Detail AesthetiX Typography (Redtrap-Expanded)
+   Ultra-Optimized Mobile Experience
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700;800&family=Red+Hat+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Exact Detail AesthetiX Headline Font */
+@font-face {
+  font-family: 'Redtrap-Expanded';
+  src: url('../fonts/Redtrap-Expanded.woff') format('woff');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Redtrap';
+  src: url('../fonts/Redtrap.woff') format('woff');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --bg-black: #050505;
@@ -27,8 +46,8 @@
   --text-grey: #a0a0a0;
   --text-dim: #707070;
   
-  --font-heading: 'Chakra Petch', 'Red Hat Display', sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Redtrap-Expanded', 'Redtrap', 'Red Hat Display', sans-serif;
+  --font-body: 'Red Hat Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   
   --container-max: 1320px;
 }
@@ -45,6 +64,7 @@ html {
   color: var(--text-white);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -52,6 +72,7 @@ body {
   color: var(--text-white);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -75,6 +96,7 @@ button, input, select, textarea {
   padding: 0 24px;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 /* Typography Utility */
@@ -102,7 +124,7 @@ button, input, select, textarea {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(5, 5, 5, 0.95);
+  background: rgba(5, 5, 5, 0.96);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
@@ -111,7 +133,7 @@ button, input, select, textarea {
 .header-inner {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -125,23 +147,23 @@ button, input, select, textarea {
 }
 
 .site-logo img {
-  height: 48px;
+  height: 44px;
   width: auto;
   filter: drop-shadow(0 0 10px rgba(250, 86, 10, 0.4));
 }
 
 .site-logo-text {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--text-white);
   line-height: 1;
 }
 
 .site-logo-sub {
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   color: var(--accent-gold);
   text-transform: uppercase;
   font-weight: 600;
@@ -157,7 +179,7 @@ button, input, select, textarea {
 
 .nav-link {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: #cfcfcf;
   text-transform: uppercase;
@@ -175,11 +197,11 @@ button, input, select, textarea {
   background-color: var(--accent-gold);
   color: #000;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 12px 22px;
+  padding: 11px 20px;
   border: 1px solid var(--accent-gold);
   border-radius: 2px;
   cursor: pointer;
@@ -196,17 +218,17 @@ button, input, select, textarea {
 
 .mobile-menu-toggle {
   display: none;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #fff;
-  padding: 8px 12px;
+  padding: 9px 12px;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .mobile-menu-toggle svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   display: block;
 }
 
@@ -215,7 +237,7 @@ button, input, select, textarea {
    ========================================================================== */
 .hero-section {
   position: relative;
-  padding-top: 140px;
+  padding-top: 130px;
   padding-bottom: 70px;
   background: radial-gradient(circle at 65% 30%, rgba(250, 86, 10, 0.1) 0%, transparent 60%),
               radial-gradient(circle at 20% 70%, rgba(229, 169, 25, 0.07) 0%, transparent 50%),
@@ -243,7 +265,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   color: var(--accent-red);
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -261,10 +283,10 @@ button, input, select, textarea {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 44px;
-  line-height: 1.12;
+  font-size: 40px;
+  line-height: 1.15;
   font-weight: 800;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 20px;
   color: #fff;
@@ -319,9 +341,9 @@ button, input, select, textarea {
   background-color: var(--accent-gold);
   color: #000;
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 15px 28px;
   border: 1px solid var(--accent-gold);
@@ -345,9 +367,9 @@ button, input, select, textarea {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 15px 26px;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -388,8 +410,8 @@ button, input, select, textarea {
 
 .proof-label {
   font-family: var(--font-heading);
-  font-size: 11px;
-  letter-spacing: 0.1em;
+  font-size: 10px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #888;
   display: block;
@@ -397,9 +419,10 @@ button, input, select, textarea {
 
 .proof-val {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   color: #fff;
+  letter-spacing: 0.04em;
 }
 
 /* Hero Estimate Form Card (Detail AesthetiX 1:1) */
@@ -422,10 +445,10 @@ button, input, select, textarea {
 
 .hero-form-header h3 {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: #fff;
 }
 
@@ -453,7 +476,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #bbb;
 }
@@ -464,7 +487,7 @@ button, input, select, textarea {
   border: 1px solid rgba(255, 255, 255, 0.14);
   color: #fff;
   padding: 12px 14px;
-  font-size: 14px;
+  font-size: 15px;
   border-radius: 2px;
   outline: none;
   transition: border-color 0.2s ease;
@@ -488,9 +511,9 @@ button, input, select, textarea {
   background-color: var(--accent-gold);
   color: #000;
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 15px;
   border: none;
@@ -529,9 +552,9 @@ button, input, select, textarea {
 
 .section-eyebrow {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--accent-red);
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -539,12 +562,12 @@ button, input, select, textarea {
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .services-grid-5 {
@@ -598,7 +621,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--accent-red);
   text-transform: uppercase;
   margin-bottom: 4px;
@@ -621,11 +644,11 @@ button, input, select, textarea {
 
 .service-card-title {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 /* ==========================================================================
@@ -657,10 +680,10 @@ button, input, select, textarea {
 
 .framed-box-title {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   line-height: 1.2;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 24px;
@@ -732,7 +755,7 @@ button, input, select, textarea {
   bottom: 24px;
   left: 24px;
   right: 24px;
-  background: rgba(10, 10, 10, 0.88);
+  background: rgba(10, 10, 10, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   padding: 16px 20px;
@@ -741,10 +764,10 @@ button, input, select, textarea {
 
 .image-floating-badge h4 {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: #fff;
 }
 
@@ -777,10 +800,10 @@ button, input, select, textarea {
 
 .spanish-title {
   font-family: var(--font-heading);
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   color: #fff;
   line-height: 1.2;
 }
@@ -822,6 +845,7 @@ button, input, select, textarea {
   border: 1px solid var(--border-red);
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.6);
   user-select: none;
+  touch-action: pan-y;
 }
 
 .ba-image {
@@ -883,7 +907,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 6px 12px;
   border-radius: 2px;
@@ -924,7 +948,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: #888;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -933,10 +957,10 @@ button, input, select, textarea {
 
 .showcase-title {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 20px;
@@ -955,7 +979,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 14px 28px;
   border: none;
@@ -991,9 +1015,9 @@ button, input, select, textarea {
 
 .reviews-title {
   font-family: var(--font-heading);
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 20px;
@@ -1005,7 +1029,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 12px 28px;
   border: none;
@@ -1063,10 +1087,11 @@ button, input, select, textarea {
 
 .review-author-name {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .review-author-meta {
@@ -1085,9 +1110,9 @@ button, input, select, textarea {
 
 .pillars-title {
   font-family: var(--font-heading);
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -1122,8 +1147,8 @@ button, input, select, textarea {
 }
 
 .pillar-icon {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   margin-bottom: 22px;
   color: var(--accent-red);
 }
@@ -1134,9 +1159,9 @@ button, input, select, textarea {
 
 .pillar-heading {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 18px;
@@ -1171,9 +1196,9 @@ button, input, select, textarea {
 
 .gallery-title {
   font-family: var(--font-heading);
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -1222,7 +1247,7 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent-gold);
   padding: 4px 8px;
@@ -1256,18 +1281,18 @@ button, input, select, textarea {
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--accent-gold);
   text-transform: uppercase;
 }
 
 .behind-scenes-title {
   font-family: var(--font-heading);
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  line-height: 1.15;
+  line-height: 1.2;
   color: #fff;
 }
 
@@ -1341,9 +1366,9 @@ button, input, select, textarea {
 
 .area-pill {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 8px 16px;
   background: #111;
@@ -1385,9 +1410,9 @@ button, input, select, textarea {
 
 .footer-heading {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent-gold);
   margin-bottom: 18px;
@@ -1425,7 +1450,7 @@ button, input, select, textarea {
 .footer-phone-link {
   color: var(--accent-gold);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   font-family: var(--font-heading);
 }
 
@@ -1447,16 +1472,16 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVENESS
+   MOBILE & TABLET RESPONSIVENESS — DEEP OPTIMIZATION
    ========================================================================== */
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
   
   .services-grid-5 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .service-card.stagger {
@@ -1497,23 +1522,55 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .site-header {
+    padding: 0;
+  }
+
+  .header-inner {
+    padding: 10px 16px;
+  }
+
+  .site-logo img {
+    height: 38px;
+  }
+
+  .site-logo-text {
+    font-size: 17px;
+  }
+
+  .site-logo-sub {
+    font-size: 9px;
+  }
+
   .nav-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: #080808 !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95);
+    background: #0a0a0a !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.98);
     flex-direction: column;
-    padding: 24px 20px;
+    padding: 24px 20px 30px;
     gap: 16px;
-    border-bottom: 2px solid var(--accent-red);
+    border-bottom: 3px solid var(--accent-red);
     z-index: 9999;
   }
   
   .nav-menu.active {
     display: flex !important;
+  }
+
+  .nav-link {
+    font-size: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: block;
+    width: 100%;
   }
   
   .header-cta-btn {
@@ -1524,42 +1581,421 @@ button, input, select, textarea {
     display: block;
   }
   
-  .hero-title {
-    font-size: 32px;
-  }
-  
+  /* Hero Section Mobile */
   .hero-section {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 86px;
+    padding-bottom: 40px;
   }
-  
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    line-height: 1.18;
+    margin-bottom: 16px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .hero-bullets {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .hero-bullet-item {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .hero-bullet-item svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .btn-primary-gold, .btn-secondary-ghost {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 18px;
+    font-size: 13px;
+  }
+
+  .hero-proof-badges {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 16px;
+  }
+
+  .proof-stars {
+    font-size: 12px;
+  }
+
+  .proof-label {
+    font-size: 9px;
+  }
+
+  .proof-val {
+    font-size: 11px;
+  }
+
+  /* Form Card Mobile */
+  .hero-form-card {
+    border-radius: 4px;
+  }
+
+  .hero-form-header {
+    padding: 14px 18px;
+  }
+
+  .hero-form-header h3 {
+    font-size: 16px;
+  }
+
+  .hero-form-header p {
+    font-size: 11px;
+  }
+
+  .hero-form-body {
+    padding: 18px 14px;
+    gap: 12px;
+  }
+
+  .form-group label {
+    font-size: 10px;
+  }
+
+  .form-input, .form-select, .form-textarea {
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+    padding: 11px 12px;
+  }
+
+  .form-textarea {
+    min-height: 70px;
+  }
+
+  /* 5 Services Mobile — Compact 240px Cards */
+  .services-section {
+    padding: 50px 0 60px;
+  }
+
+  .section-header-banner {
+    margin-bottom: 28px;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
   .services-grid-5 {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
-  
+
+  .service-card {
+    height: 220px;
+    border-radius: 4px;
+  }
+
+  .service-card.stagger {
+    margin-top: 0;
+  }
+
+  .service-card-banner {
+    padding: 12px 8px;
+    margin-top: 8px;
+  }
+
+  .service-card-title {
+    font-size: 12px;
+  }
+
+  /* Why Trust Section Mobile */
+  .why-trust-section {
+    padding: 50px 0;
+  }
+
+  .framed-box-red {
+    padding: 24px 16px;
+  }
+
+  .framed-box-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+    line-height: 1.22;
+  }
+
+  .letter-content {
+    font-size: 14px;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .checklist-clean li {
+    font-size: 13px;
+  }
+
+  .framed-image-box {
+    min-height: 280px;
+    height: 320px;
+  }
+
+  .image-floating-badge {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 12px 14px;
+  }
+
+  .image-floating-badge h4 {
+    font-size: 12px;
+  }
+
+  .image-floating-badge p {
+    font-size: 11px;
+  }
+
+  /* Spanish Banner Mobile */
+  .spanish-banner-section {
+    padding: 24px 0;
+  }
+
   .spanish-banner-inner {
     flex-direction: column;
     text-align: center;
-    padding: 24px;
+    padding: 20px 16px;
+    gap: 18px;
   }
-  
+
+  .spanish-title {
+    font-size: 18px;
+  }
+
   .spanish-desc {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  /* Showcase / Before-After Mobile */
+  .showcase-section {
+    padding: 50px 0;
+  }
+
+  .ba-container {
+    height: 280px;
+  }
+
+  .showcase-content-box {
+    padding: 24px 16px;
+  }
+
+  .showcase-subtitle {
+    font-size: 10px;
+  }
+
+  .showcase-title {
+    font-size: 21px;
+    line-height: 1.22;
+  }
+
+  .showcase-desc {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .btn-white {
+    width: 100%;
+    justify-content: center;
+    padding: 13px;
+    font-size: 12px;
+  }
+
+  /* Reviews Mobile */
+  .reviews-section {
+    padding: 50px 0;
+  }
+
+  .reviews-framed-wrapper {
+    padding: 30px 16px;
+  }
+
+  .reviews-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .reviews-cta-btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .reviews-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .review-card {
+    padding: 20px 16px;
+  }
+
+  .review-quote {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+
+  /* Pillars Mobile */
+  .pillars-section {
+    padding: 50px 0 60px;
+  }
+
+  .pillars-title {
+    font-size: 21px;
+    margin-bottom: 30px;
+    line-height: 1.25;
+  }
+
+  .pillars-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .pillar-card {
+    padding: 28px 18px;
+  }
+
+  .pillar-heading {
+    font-size: 16px;
     margin-bottom: 12px;
   }
-  
-  .gallery-grid {
-    grid-template-columns: 1fr;
+
+  .pillar-desc {
+    font-size: 13px;
   }
-  
+
+  /* Gallery Mobile (2-Column Grid) */
+  .gallery-section {
+    padding: 50px 0;
+  }
+
+  .gallery-framed-wrapper {
+    padding: 28px 12px;
+  }
+
+  .gallery-title {
+    font-size: 22px;
+  }
+
+  .gallery-subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .gallery-item {
+    height: 130px;
+  }
+
+  .gallery-item-badge {
+    font-size: 8px;
+    padding: 2px 5px;
+    bottom: 6px;
+    left: 6px;
+  }
+
+  /* Behind The Scenes Mobile */
+  .behind-scenes-section {
+    padding: 50px 0;
+  }
+
+  .behind-scenes-title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .behind-scenes-photo {
+    height: 240px;
+  }
+
+  /* Service Areas Mobile */
+  .service-areas-section {
+    padding: 40px 0;
+  }
+
+  .areas-header h2 {
+    font-size: 18px !important;
+  }
+
+  .areas-pills {
+    gap: 6px;
+  }
+
+  .area-pill {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  /* Footer Mobile */
+  .site-footer {
+    padding: 44px 0 24px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 30px;
+  }
+
+  .footer-heading {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+    padding-top: 18px;
+  }
+}
+
+/* Extra small devices (iPhone SE / 375px) */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 22px;
   }
   
-  .ba-container {
-    height: 320px;
+  .section-title, .why-trust-section .framed-box-title, .reviews-title, .pillars-title, .gallery-title {
+    font-size: 19px;
   }
-  
-  .framed-box-red, .showcase-content-box, .reviews-framed-wrapper, .gallery-framed-wrapper {
-    padding: 24px 18px;
+
+  .hero-proof-badges {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }
