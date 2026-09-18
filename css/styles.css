@@ -1911,50 +1911,353 @@ section {
 }
 
 @media (max-width: 768px) {
+  /* Global containers & spacing */
+  .container {
+    padding: 0 16px;
+  }
+  
+  /* Header */
+  .site-header {
+    padding: 16px 0 !important;
+  }
+  .nav-brand {
+    gap: 10px;
+  }
+  .brand-fist-logo {
+    height: 32px;
+  }
+  .brand-name {
+    font-size: 1.25rem;
+  }
   .nav-menu-trigger {
-    top: 20px;
-    right: 20px;
+    top: 14px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
   }
   .autovera-dropdown-menu {
-    right: 16px;
-    left: 16px;
+    right: 12px;
+    left: 12px;
     width: auto;
-    padding: 24px 20px;
-    top: 76px;
+    padding: 20px 16px;
+    top: 64px;
   }
-  
+
+  /* HERO SECTION (Compact, No dead space, Punchy) */
   .section-hero {
-    min-height: 680px;
-    padding-bottom: 60px;
+    min-height: auto;
+    height: auto;
+    padding-top: 96px;
+    padding-bottom: 48px;
+    align-items: flex-start;
+    display: flex;
+  }
+  .hero-bg-img {
+    object-position: center 20%;
+    opacity: 0.55;
+  }
+  .hero-text-block {
+    max-width: 100%;
   }
   .hero-title {
-    font-size: 2.8rem;
+    font-size: clamp(2.2rem, 9vw, 2.85rem);
+    line-height: 1.08;
+    margin-bottom: 16px;
   }
-  
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    color: #b8b8b8;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+  .hero-buttons .btn-autovera-primary,
+  .hero-buttons .btn-autovera-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.92rem;
+  }
+  .hero-slide-indicator {
+    max-width: 180px;
+  }
+
+  /* Section Title Spacing */
+  .section-title-wrap {
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .orange-bar {
+    width: 3px;
+    min-height: 36px;
+  }
+  .section-heading {
+    font-size: clamp(1.65rem, 6.5vw, 2.1rem);
+  }
+  .section-subtext {
+    font-size: 0.92rem;
+  }
+
+  /* BEFORE & AFTER SECTION MOBILE OPTIMIZATION */
+  .section-before-after {
+    padding: 60px 0;
+  }
+  .ba-card-wrapper {
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+  .ba-case-badge-wrap {
+    margin-bottom: 12px;
+  }
+  .ba-case-badge {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    border-radius: 8px;
+    line-height: 1.35;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ba-badge-dot {
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+  }
+  .ba-badge-title {
+    display: inline-block;
+  }
+
+  /* Ample aspect ratio so image isn't squashed & handle doesn't collide with tags */
+  .ba-slider-container {
+    aspect-ratio: 4 / 3;
+    min-height: 250px;
+    border-radius: 8px;
+  }
+  .ba-handle-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .handle-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .ba-pill-tag {
+    bottom: 10px;
+    height: 24px;
+    padding: 0 10px;
+    font-size: 0.64rem;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+  }
+  .ba-tag-before {
+    left: 8px;
+  }
+  .ba-tag-after {
+    right: 8px;
+  }
+
+  /* Metadata row: clean stacked layout without orphan bullet dots */
+  .ba-footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .ba-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 0.84rem;
+    width: 100%;
+  }
+  .ba-meta span {
+    display: block;
+    line-height: 1.4;
+  }
+  .ba-meta-sep {
+    display: none !important;
+  }
+  .ba-cta-link {
+    font-size: 0.88rem;
+    margin-top: 4px;
+  }
+
+  /* ACHIEVEMENTS / STATS */
+  .section-achievements {
+    padding: 40px 0;
+  }
   .achievements-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-  
+  .achievement-card {
+    padding: 24px 20px;
+  }
+
+  /* SERVICES ACCORDION */
+  .section-services {
+    padding: 60px 0;
+  }
+  .service-header {
+    padding: 18px 14px;
+  }
+  .service-header-title h3 {
+    font-size: 1.05rem;
+  }
   .service-preview-grid {
     grid-template-columns: 1fr;
     padding-left: 0;
+    gap: 16px;
   }
 
+  /* WHY CHOOSE US */
+  .section-why-us {
+    padding: 60px 0;
+  }
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .why-us-media {
+    order: -1;
+  }
+  .why-us-card {
+    padding: 24px 20px;
+  }
+
+  /* PRICING */
+  .section-pricing {
+    padding: 60px 0;
+  }
+  .pricing-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .pricing-sticky-left {
+    position: static;
+  }
+  .pricing-card {
+    padding: 28px 20px;
+  }
+
+  /* REVIEWS */
+  .section-reviews {
+    padding: 60px 0;
+  }
+  .review-card {
+    padding: 28px 20px;
+  }
+
+  /* ABOUT STORY */
+  .section-about-story {
+    padding: 60px 0;
+  }
   .about-story-container {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
   .story-glass-card {
-    padding: 48px 24px;
+    padding: 40px 20px;
     max-width: 100%;
   }
-  
+
+  /* INSIGHTS / BLOGS */
+  .section-insights {
+    padding: 60px 0;
+  }
   .insights-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
+
+  /* BOOKING SECTION */
+  .section-booking {
+    padding: 60px 0;
+  }
+  .booking-two-column {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .cta-banner-title {
+    font-size: clamp(2rem, 7.5vw, 2.5rem);
+  }
+  .booking-right-form {
+    padding: 28px 18px;
+    border-radius: 12px;
+  }
+  .cta-buttons-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .cta-buttons-row .btn-orange,
+  .cta-buttons-row .btn-phone-outline,
+  .cta-buttons-row .btn-email-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    padding: 60px 0 32px;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+  .footer-socials {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .section-heading {
+    font-size: 1.7rem;
+  }
+  .ba-card-wrapper {
+    padding: 14px 10px;
+  }
+  .ba-slider-container {
+    aspect-ratio: 4 / 3;
+    min-height: 240px;
+  }
+  .ba-pill-tag {
+    height: 22px;
+    padding: 0 8px;
+    font-size: 0.6rem;
+    bottom: 8px;
+  }
+  .ba-tag-before {
+    left: 6px;
+  }
+  .ba-tag-after {
+    right: 6px;
+  }
+  .ba-handle-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .handle-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .booking-right-form {
+    padding: 24px 14px;
   }
 }
